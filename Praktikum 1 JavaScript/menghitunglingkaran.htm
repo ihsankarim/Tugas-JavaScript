@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luas dan Keliling Lingkaran</title>
+    <script>
+        function luasLingkaran() {
+
+            const phi = 3.14;
+            let jari2 = document.getElementById('r').value;
+            let luas = phi * jari2 ** 2;
+
+            document.getElementById('hasil').value = luas;
+
+        }
+
+        function kelilingLingkaran() {
+            const phi = 3.14;
+            let jari2 = document.getElementById('r').value;
+            let keliling = 2 * phi * jari2;
+
+            document.getElementById('hasil').value = keliling;
+        }
+    </script>
+    
+    <style>
+        fieldset {
+            width: 50%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Menghitung Luas dan keliling Lingkaran</legend>
+    <p>Luas= phi x Jari-Jari(r)^2</p>
+    <p>Keliling = 2 x phi (3,14) x Jari-Jari (r) </p>
+    <label for="">Jari-Jari</label>
+    <input id="r" type="number" name="" value="">
+
+    <button onclick="luasLingkaran()">Luas</button>
+    <button onclick="kelilingLingkaran()">Keliling</button>
+
+    <label for="">Hasil</label>
+    <input id="hasil" type="number" name="" readonly>
+    </fieldset>
+</body>
+</html>
